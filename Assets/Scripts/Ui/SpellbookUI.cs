@@ -59,13 +59,13 @@ public class SpellbookUI : MonoBehaviour {
     private void displaySpells() {
         if (spellbook.getSpellCount() > page * 2) {
             leftPage.gameObject.SetActive(true);
-            leftPage.displaySpell(spellbook.getSpell(page * 2), spellbook.getSpellsHotbarMapping(page * 2));
+            leftPage.SpellIndex = page * 2;
         } else {
             leftPage.gameObject.SetActive(false);
         }
         if (spellbook.getSpellCount() > (page * 2) + 1) {
             rightPage.gameObject.SetActive(true);
-            rightPage.displaySpell(spellbook.getSpell((page * 2) + 1), spellbook.getSpellsHotbarMapping((page * 2) + 1));
+            rightPage.SpellIndex = (page * 2) + 1;
         } else {
             rightPage.gameObject.SetActive(false);
         }

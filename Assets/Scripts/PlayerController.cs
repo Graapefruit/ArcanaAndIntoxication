@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour {
     public int speed = 5;
     new public Camera camera;
+    public EventSystem eventSystem;
+    public GraphicRaycaster leftPageRaycaster;
+    public GraphicRaycaster rightPageRaycaster;
     public GameEvent enableSpellbookUI;
     public GameEvent disableSpellbookUI;
     public GameEvent flipSpellbookLeft;
     public GameEvent flipSpellbookRight;
     // WHY DOES THIS WORK? (The mask)
     private const int GROUND_LAYER = 1 << 6;
+    private const int UI_LAYER = 1 << 5;
     private const float ONE_OVER_ROOT_TWO = 0.707107f;
     private Player player;
     private StateManager stateManager;
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour {
                 doCharacterMovement();
                 doCharacterRotation();
                 doSpellbookPageFlipping();
+                doHotbarAssignments();
             }),
             (() => {
                 doDisableSpellbookUI();
@@ -114,6 +121,37 @@ public class PlayerController : MonoBehaviour {
             flipSpellbookLeft.Raise();
         } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
             flipSpellbookRight.Raise();
+        }
+    }
+
+    private void doHotbarAssignments() {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            doHotbarAssignment(1, leftPageRaycaster);
+            doHotbarAssignment(1, rightPageRaycaster);
+        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            doHotbarAssignment(2, leftPageRaycaster);
+            doHotbarAssignment(2, rightPageRaycaster);
+        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            doHotbarAssignment(3, leftPageRaycaster);
+            doHotbarAssignment(3, rightPageRaycaster);
+        } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            doHotbarAssignment(4, leftPageRaycaster);
+            doHotbarAssignment(4, rightPageRaycaster);
+        }
+    }
+
+    private void doHotbarAssignment(int hotbarKey, GraphicRaycaster graphicRaycaster) {
+        PointerEventData pointerEventData = new PointerEventData(eventSystem);
+        pointerEventData.position = Input.mousePosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        graphicRaycaster.Raycast(pointerEventData, results);
+        foreach (RaycastResult result in results) {
+            GameObject spellbookPage = result.gameObject;
+            if (spellbookPage.tag == "SpellbookPageUI") {
+                Debug.Log(result);
+                SpellbookPageUI page = spellbookPage.GetComponent<SpellbookPageUI>();
+                page.spellbook.setNewHotbarMapping(hotbarKey, page.SpellIndex);
+            }
         }
     }
 

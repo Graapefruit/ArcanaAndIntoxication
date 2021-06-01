@@ -21,6 +21,9 @@ public class Spellbook : ScriptableObject {
                 spellbookToHotbar[hotbarToSpellbook[i]] = i+1;
             }
         }
+        foreach(int i in spellbookToHotbar) {
+            Debug.Log(i);
+        }
     }
 
     public SpellInfo getSpell(int i) {
@@ -46,8 +49,11 @@ public class Spellbook : ScriptableObject {
     // }
 
     public void setNewHotbarMapping(int h, int i) {
-        if (hotbarToSpellbook[h] != -1) {
-            spellbookToHotbar[hotbarToSpellbook[h]] = 0;
+        if (hotbarToSpellbook[h-1] != -1) {
+            spellbookToHotbar[hotbarToSpellbook[h-1]] = 0;
+        }
+        if (spellbookToHotbar[i] != 0) {
+            hotbarToSpellbook[spellbookToHotbar[i]-1] = -1;
         }
         hotbarToSpellbook[h-1] = i;
         spellbookToHotbar[i] = h;
