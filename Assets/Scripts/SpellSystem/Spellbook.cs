@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [CreateAssetMenu]
 public class Spellbook : ScriptableObject {
@@ -9,6 +10,8 @@ public class Spellbook : ScriptableObject {
     [SerializeField]
     // The fact that spells are indexed here as 0-3 but we use hotkeys 1-4 makes the below code have a lot of annoying off-by-one issues that should remain fixed
     private int[] hotbarToSpellbook;
+    [SerializeField]
+    public GameEvent hotbarUpdateEvent;
     private List<int> spellbookToHotbar;
 
     void OnValidate() {
@@ -20,9 +23,6 @@ public class Spellbook : ScriptableObject {
             if (hotbarToSpellbook[i] > -1) {
                 spellbookToHotbar[hotbarToSpellbook[i]] = i+1;
             }
-        }
-        foreach(int i in spellbookToHotbar) {
-            Debug.Log(i);
         }
     }
 
@@ -57,6 +57,7 @@ public class Spellbook : ScriptableObject {
         }
         hotbarToSpellbook[h-1] = i;
         spellbookToHotbar[i] = h;
+        hotbarUpdateEvent.Raise();
     }
 
     public int getSpellCount() {

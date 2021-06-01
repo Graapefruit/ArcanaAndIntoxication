@@ -148,7 +148,6 @@ public class PlayerController : MonoBehaviour {
         foreach (RaycastResult result in results) {
             GameObject spellbookPage = result.gameObject;
             if (spellbookPage.tag == "SpellbookPageUI") {
-                Debug.Log(result);
                 SpellbookPageUI page = spellbookPage.GetComponent<SpellbookPageUI>();
                 page.spellbook.setNewHotbarMapping(hotbarKey, page.SpellIndex);
             }

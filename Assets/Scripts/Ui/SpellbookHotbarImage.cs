@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class SpellbookHotbarImage : MonoBehaviour {
     public Spellbook spellbook;
-    public int correspondingIndex;
+    [SerializeField]
+    private int correspondingIndex;
     private Image image;
     void Start() {
         image = transform.GetComponent<Image>();
+        updateHotbarImage();
     }
 
-    // TODO: Event System!
-    void Update() {
+    public void updateHotbarImage() {
         if (correspondingIndex <= 4 && correspondingIndex > 0) {
             SpellInfo spellInfo = spellbook.getSpellFromHotbar(correspondingIndex);
             if (spellInfo == null) {

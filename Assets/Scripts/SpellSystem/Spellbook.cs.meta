@@ -3,7 +3,8 @@ guid: 9bf3fbf37daad5e44b1e710f8b46273f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hotbarUpdateEvent: {fileID: 11400000, guid: 8ec82acdaab2b144a8be7644e2253f8a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

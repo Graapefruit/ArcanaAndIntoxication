@@ -35,28 +35,32 @@ public class SpellbookPageUI : MonoBehaviour {
             cost.text = "Cost: "+ spellInfo.cost;
             cooldown.text = "Cooldown: " + spellInfo.cooldown;
             description.text = spellInfo.description;
-            int hotbarAssignment = spellbook.getSpellsHotbarMapping(spellIndex);
-            switch (hotbarAssignment) {
-                case 1:
-                    hotbarAssignmentWrapper.color = RED_OUTLINE;
-                    hotbarAssignmentWrapper.gameObject.SetActive(true);
-                    break;
-                case 2:
-                    hotbarAssignmentWrapper.color = BLUE_OUTLINE;
-                    hotbarAssignmentWrapper.gameObject.SetActive(true);
-                    break;
-                case 3:
-                    hotbarAssignmentWrapper.color = YELLOW_OUTLINE;
-                    hotbarAssignmentWrapper.gameObject.SetActive(true);
-                    break;
-                case 4:
-                    hotbarAssignmentWrapper.color = GREEN_OUTLINE;
-                    hotbarAssignmentWrapper.gameObject.SetActive(true);
-                    break;
-                default:
-                    hotbarAssignmentWrapper.gameObject.SetActive(false);
-                    break;
-            }
+            updateHotbarImage();
+        }
+    }
+
+    public void updateHotbarImage() {
+        int hotbarAssignment = spellbook.getSpellsHotbarMapping(spellIndex);
+        switch (hotbarAssignment) {
+            case 1:
+                hotbarAssignmentWrapper.color = RED_OUTLINE;
+                hotbarAssignmentWrapper.gameObject.SetActive(true);
+                break;
+            case 2:
+                hotbarAssignmentWrapper.color = BLUE_OUTLINE;
+                hotbarAssignmentWrapper.gameObject.SetActive(true);
+                break;
+            case 3:
+                hotbarAssignmentWrapper.color = YELLOW_OUTLINE;
+                hotbarAssignmentWrapper.gameObject.SetActive(true);
+                break;
+            case 4:
+                hotbarAssignmentWrapper.color = GREEN_OUTLINE;
+                hotbarAssignmentWrapper.gameObject.SetActive(true);
+                break;
+            default:
+                hotbarAssignmentWrapper.gameObject.SetActive(false);
+                break;
         }
     }
 }
