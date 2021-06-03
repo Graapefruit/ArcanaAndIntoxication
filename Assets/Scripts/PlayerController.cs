@@ -14,20 +14,21 @@ public class PlayerController : MonoBehaviour {
     public GameEvent disableSpellbookUI;
     public GameEvent flipSpellbookLeft;
     public GameEvent flipSpellbookRight;
-    // WHY DOES THIS WORK? (The mask)
-    private const int GROUND_LAYER = 1 << 6;
-    private const int UI_LAYER = 1 << 5;
     private const float ONE_OVER_ROOT_TWO = 0.707107f;
     private Player player;
     private StateManager stateManager;
+    private Vector3 heading;
+    private Pointer pointer;
     void Start() {
+        heading = Vector3.zero;
+        pointer = transform.Find("Pointer").GetComponent<Pointer>();
         player = transform.GetComponent<Player>();
         State freeState = new State(
             "Free State",
             (() => {}),
             (() => {
+                updateHeading();
                 doCharacterMovement();
-                doCharacterRotation();
                 doCharacterSpellCasts();
             }),
             (() => {})
@@ -39,8 +40,8 @@ public class PlayerController : MonoBehaviour {
                 doEnableSpellbookUI();
             }),
             (() => {
+                updateHeading();
                 doCharacterMovement();
-                doCharacterRotation();
                 doSpellbookPageFlipping();
                 doHotbarAssignments();
             }),
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour {
 
     private void doCharacterMovement() {
         float xMagnitude = 0.0f;
-        float zMagnitude = 0.0f;
+        float yMagnitude = 0.0f;
         Vector3 location = transform.position;
         if (Input.GetKey(KeyCode.A)) {
             xMagnitude = -1.0f;
@@ -82,37 +83,29 @@ public class PlayerController : MonoBehaviour {
             xMagnitude = 1.0f;
         }
         if (Input.GetKey(KeyCode.S)) {
-            zMagnitude = -1.0f;
+            yMagnitude = -1.0f;
         } else if (Input.GetKey(KeyCode.W)) {
-            zMagnitude = 1.0f;
+            yMagnitude = 1.0f;
         }
 
-        if (xMagnitude != 0.0f && zMagnitude != 0.0f) {
+        if (xMagnitude != 0.0f && yMagnitude != 0.0f) {
             xMagnitude *= ONE_OVER_ROOT_TWO;
-            zMagnitude *= ONE_OVER_ROOT_TWO;
+            yMagnitude *= ONE_OVER_ROOT_TWO;
         }
         location.x += xMagnitude * speed * Time.deltaTime;
-        location.z += zMagnitude * speed * Time.deltaTime;
+        location.y += yMagnitude * speed * Time.deltaTime;
         transform.position = location;
-    }
-
-    private void doCharacterRotation() {
-        if (camera == null) {
-            return;
-        }
-        Vector3 mouseLocation = getMouseLocation();
-        transform.rotation = Quaternion.Euler(0.0f, getAngle(transform.position, mouseLocation), 0.0f);
     }
 
     private void doCharacterSpellCasts() {
         if (Input.GetKey(KeyCode.Alpha1)) {
-            player.castSpell(1, getMouseLocation());
+            player.castSpell(1, heading);
         } else if (Input.GetKey(KeyCode.Alpha2)) {
-            player.castSpell(2, getMouseLocation());
+            player.castSpell(2, heading);
         } else if (Input.GetKey(KeyCode.Alpha3)) {
-            player.castSpell(3, getMouseLocation());
+            player.castSpell(3, heading);
         } else if (Input.GetKey(KeyCode.Alpha4)) {
-            player.castSpell(4, getMouseLocation());
+            player.castSpell(4, heading);
         }
     }
 
@@ -162,20 +155,10 @@ public class PlayerController : MonoBehaviour {
         disableSpellbookUI.Raise();
     }
 
-    private float getAngle(Vector3 source, Vector3 dest) {
-        float x = dest.x - source.x;
-        float z = dest.z - source.z;
-        float angle = Mathf.Atan2(x, z) * Mathf.Rad2Deg;
-        return angle; 
-    }
-
-    private Vector3 getMouseLocation() {
-        RaycastHit hit;
+    private void updateHeading() {
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, GROUND_LAYER)) {
-            return hit.point;
-        } else {
-            return Vector3.zero;
-        }
+        heading = ray.origin;
+        heading.z = 0.0f;
+        pointer.doUpdate(transform.position, heading);
     }
 }

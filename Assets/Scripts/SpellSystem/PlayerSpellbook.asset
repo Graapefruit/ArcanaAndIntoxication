@@ -16,4 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 82d3b84d5663454469025eba660c61ef, type: 2}
   - {fileID: 11400000, guid: 2dfc6932adec01a4d939f933713a267c, type: 2}
   - {fileID: 11400000, guid: 96bec493b7c6c14459882e149ccd11ee, type: 2}
-  hotbarToSpellbook: 020000000100000000000000ffffffff
+  hotbarToSpellbook: 000000000100000002000000ffffffff
+  hotbarUpdateEvent: {fileID: 11400000, guid: 8ec82acdaab2b144a8be7644e2253f8a, type: 2}
