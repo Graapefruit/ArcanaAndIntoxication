@@ -10,6 +10,7 @@ public class Spellbook : ScriptableObject {
     [SerializeField]
     // The fact that spells are indexed here as 0-3 but we use hotkeys 1-4 makes the below code have a lot of annoying off-by-one issues that should remain fixed
     private int[] hotbarToSpellbook;
+    private float[] timeLastCast;
     [SerializeField]
     public GameEvent hotbarUpdateEvent;
     private List<int> spellbookToHotbar;
@@ -23,6 +24,10 @@ public class Spellbook : ScriptableObject {
             if (hotbarToSpellbook[i] > -1) {
                 spellbookToHotbar[hotbarToSpellbook[i]] = i+1;
             }
+        }
+        timeLastCast = new float[4];
+        for (int i = 0; i < 4; i++) {
+            timeLastCast[i] = 0.0f;
         }
     }
 
@@ -62,5 +67,17 @@ public class Spellbook : ScriptableObject {
 
     public int getSpellCount() {
         return spells.Count;
+    }
+
+    public bool spellOffCooldown(int h) {
+        return Time.time - timeLastCast[h-1] >= getSpellFromHotbar(h).cooldown;
+    }
+
+    public float updateAndGetRemainingCooldownPercentage(int h) {
+        return Mathf.Max(0, Time.time - timeLastCast[h-1]);
+    }
+
+    public void putSpellOnCooldown(int h) {
+        timeLastCast[h-1] = Time.time;
     }
 }

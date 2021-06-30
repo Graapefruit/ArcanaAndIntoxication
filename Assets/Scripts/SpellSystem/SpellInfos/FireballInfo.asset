@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Fireball
   description: Unleash a ball of fire which explodes on impact and fucks everything
     up holy shit I'm on fire aaaaaaaaaaaaaaaa
-  cooldown: 2
+  cooldown: 1
   cost: 10
   sprite: {fileID: 21300000, guid: fc262d8df47085e47b9fc59a08389b58, type: 3}
-  spellPrefab: {fileID: 6174999049301834417, guid: 895b592b38ec21a4f9b24339d6561360, type: 3}
+  spellPrefab: {fileID: 1414469551918440193, guid: 62daf4d97cda7f647b6761f3d33d0ff1, type: 3}

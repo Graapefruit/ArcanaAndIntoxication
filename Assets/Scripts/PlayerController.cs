@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour {
-    public int speed = 5;
     new public Camera camera;
     public EventSystem eventSystem;
     public GraphicRaycaster leftPageRaycaster;
@@ -19,38 +18,40 @@ public class PlayerController : MonoBehaviour {
     private StateManager stateManager;
     private Vector3 heading;
     private Pointer pointer;
-    void Start() {
+
+    void Awake() {
         heading = Vector3.zero;
         pointer = transform.Find("Pointer").GetComponent<Pointer>();
         player = transform.GetComponent<Player>();
-        State freeState = new State(
-            "Free State",
-            (() => {}),
-            (() => {
-                updateHeading();
-                doCharacterMovement();
-                doCharacterSpellCasts();
-            }),
-            (() => {})
-        );
 
-        State spellbookState = new State(
-            "Spellbook State",
-            (() => {
-                doEnableSpellbookUI();
-            }),
-            (() => {
-                updateHeading();
-                doCharacterMovement();
-                doSpellbookPageFlipping();
-                doHotbarAssignments();
-            }),
-            (() => {
-                doDisableSpellbookUI();
-            })
-        );
+        // ===== STATES =====
 
-        freeState.setOnGetNextState(() => {
+        State freeState = new State();
+        freeState.name = "Free State";
+        freeState.onUpdate = (() => {
+            updateHeading();
+            updateCharacterMovement();
+            doCharacterSpellCasts();
+        });
+
+        State spellbookState = new State();
+        spellbookState.name = "Spellbook State";
+        spellbookState.onEnter = (() => {
+            doEnableSpellbookUI();
+        });
+        spellbookState.onUpdate = (() => {
+            updateHeading();
+            updateCharacterMovement();
+            doSpellbookPageFlipping();
+            doHotbarAssignments();
+        });
+        spellbookState.onExit = (() => {
+            doDisableSpellbookUI();
+        });
+
+        // ===== STATE TRANSITIONS =====
+
+        freeState.onGetNextState = (() => {
             if (Input.GetKeyDown(KeyCode.Q)) {
                 return spellbookState;
             } else {
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour {
             }
         });
 
-        spellbookState.setOnGetNextState(() => {
+        spellbookState.onGetNextState = (() => {
             if (Input.GetKeyDown(KeyCode.Q)) {
                 return freeState;
             } else {
@@ -66,35 +67,33 @@ public class PlayerController : MonoBehaviour {
             }
         });
 
-        stateManager = new StateManager(freeState);
+        stateManager = new StateManager("Player Controller", freeState);
     }
 
     void Update() {
         stateManager.doUpdate();
     }
 
-    private void doCharacterMovement() {
-        float xMagnitude = 0.0f;
-        float yMagnitude = 0.0f;
-        Vector3 location = transform.position;
+    private void updateCharacterMovement() {
+        float x = 0.0f;
+        float y = 0.0f;
         if (Input.GetKey(KeyCode.A)) {
-            xMagnitude = -1.0f;
+            x = -1.0f;
         } else if (Input.GetKey(KeyCode.D)) {
-            xMagnitude = 1.0f;
+            x = 1.0f;
         }
         if (Input.GetKey(KeyCode.S)) {
-            yMagnitude = -1.0f;
+            y = -1.0f;
         } else if (Input.GetKey(KeyCode.W)) {
-            yMagnitude = 1.0f;
+            y = 1.0f;
         }
 
-        if (xMagnitude != 0.0f && yMagnitude != 0.0f) {
-            xMagnitude *= ONE_OVER_ROOT_TWO;
-            yMagnitude *= ONE_OVER_ROOT_TWO;
+        if (x != 0.0f && y != 0.0f) {
+            x *= ONE_OVER_ROOT_TWO;
+            y *= ONE_OVER_ROOT_TWO;
         }
-        location.x += xMagnitude * speed * Time.deltaTime;
-        location.y += yMagnitude * speed * Time.deltaTime;
-        transform.position = location;
+        player.movementInput.x = x;
+        player.movementInput.y = y;
     }
 
     private void doCharacterSpellCasts() {

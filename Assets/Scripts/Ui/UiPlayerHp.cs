@@ -10,6 +10,6 @@ public class UiPlayerHp : MonoBehaviour {
         text = transform.GetComponent<Text>();
     }
     void Update() {
-        text.text = "HP: " + stats.currentHp + " / " + stats.maxHp;
+        text.text = "HP: " + stats.currentHp.ToString("0") + " / " + stats.maxHp.ToString("0");
     }
 }

@@ -1,0 +1,1260 @@
+fileFormatVersion: 2
+guid: 8a33276ac3b2a5643ac2f418f08ecedc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4519811404772555061
+    second: CooldownSpritemap_0
+  - first:
+      213: 1780042674782525316
+    second: CooldownSpritemap_1
+  - first:
+      213: -4297654076391050422
+    second: CooldownSpritemap_2
+  - first:
+      213: 4027674565514543017
+    second: CooldownSpritemap_3
+  - first:
+      213: 2701111653417979649
+    second: CooldownSpritemap_4
+  - first:
+      213: -4046625474116950640
+    second: CooldownSpritemap_5
+  - first:
+      213: 123101185513025673
+    second: CooldownSpritemap_6
+  - first:
+      213: -1962162605037985794
+    second: CooldownSpritemap_7
+  - first:
+      213: -6624309686851961563
+    second: CooldownSpritemap_8
+  - first:
+      213: 435767807834628963
+    second: CooldownSpritemap_9
+  - first:
+      213: -4227070381983794512
+    second: CooldownSpritemap_10
+  - first:
+      213: 5994913624452813137
+    second: CooldownSpritemap_11
+  - first:
+      213: 5565775657888776449
+    second: CooldownSpritemap_12
+  - first:
+      213: -653216727200867129
+    second: CooldownSpritemap_13
+  - first:
+      213: -6313699299286256969
+    second: CooldownSpritemap_14
+  - first:
+      213: -3044339935143821846
+    second: CooldownSpritemap_15
+  - first:
+      213: 8698308960066708077
+    second: CooldownSpritemap_16
+  - first:
+      213: 9071985150292324252
+    second: CooldownSpritemap_17
+  - first:
+      213: 2489429070177403323
+    second: CooldownSpritemap_18
+  - first:
+      213: 4889750347022302551
+    second: CooldownSpritemap_19
+  - first:
+      213: 4916688095827403902
+    second: CooldownSpritemap_20
+  - first:
+      213: 3003424918343275222
+    second: CooldownSpritemap_21
+  - first:
+      213: 6570021876715177472
+    second: CooldownSpritemap_22
+  - first:
+      213: 5252742110610738640
+    second: CooldownSpritemap_23
+  - first:
+      213: -5230835578963436904
+    second: CooldownSpritemap_24
+  - first:
+      213: -573407430823412697
+    second: CooldownSpritemap_25
+  - first:
+      213: 6097191705485213770
+    second: CooldownSpritemap_26
+  - first:
+      213: 2024403742896585309
+    second: CooldownSpritemap_27
+  - first:
+      213: -3121568905213220628
+    second: CooldownSpritemap_28
+  - first:
+      213: 6351168083875020576
+    second: CooldownSpritemap_29
+  - first:
+      213: 1146841853364537256
+    second: CooldownSpritemap_30
+  - first:
+      213: 2255635976189784668
+    second: CooldownSpritemap_31
+  - first:
+      213: -8945206754577606735
+    second: CooldownSpritemap_32
+  - first:
+      213: 1748789323827848274
+    second: CooldownSpritemap_33
+  - first:
+      213: -736846983244449947
+    second: CooldownSpritemap_34
+  - first:
+      213: 4927649670465757759
+    second: CooldownSpritemap_35
+  - first:
+      213: -5411941169781249834
+    second: CooldownSpritemap_36
+  - first:
+      213: 1559492649174163974
+    second: CooldownSpritemap_37
+  - first:
+      213: 3358547131231739368
+    second: CooldownSpritemap_38
+  - first:
+      213: -2417382983338068796
+    second: CooldownSpritemap_39
+  - first:
+      213: 279613759117257797
+    second: CooldownSpritemap_40
+  - first:
+      213: -789552423251765506
+    second: CooldownSpritemap_41
+  - first:
+      213: 8562139890129388621
+    second: CooldownSpritemap_42
+  - first:
+      213: -1688080815814254749
+    second: CooldownSpritemap_43
+  - first:
+      213: 1416488713879269067
+    second: CooldownSpritemap_44
+  - first:
+      213: -5004544722992441260
+    second: CooldownSpritemap_45
+  - first:
+      213: -3065905958783468195
+    second: CooldownSpritemap_46
+  - first:
+      213: 8111166568878619255
+    second: CooldownSpritemap_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 57
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CooldownSpritemap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6c5ce69776641c0800000000000000
+      internalID: -4519811404772555061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487d273b16bf3b810800000000000000
+      internalID: 1780042674782525316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43b331336aab54c0800000000000000
+      internalID: -4297654076391050422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afbe548dac25e730800000000000000
+      internalID: 4027674565514543017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f85a8dcb64c7520800000000000000
+      internalID: 2701111653417979649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095663c329f77d7c0800000000000000
+      internalID: -4046625474116950640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_6
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980fee140e755b100800000000000000
+      internalID: 123101185513025673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effd727b18ff4c4e0800000000000000
+      internalID: -1962162605037985794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_8
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d7209df69b114a0800000000000000
+      internalID: -6624309686851961563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_9
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363a88e23882c0600800000000000000
+      internalID: 435767807834628963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_10
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baf74132ed6655c0800000000000000
+      internalID: -4227070381983794512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_11
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151d8a4dd26323350800000000000000
+      internalID: 5994913624452813137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1010afbd87b9d3d40800000000000000
+      internalID: 5565775657888776449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc59d5f8de4fe6f0800000000000000
+      internalID: -653216727200867129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_14
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2f86f40fb3168a0800000000000000
+      internalID: -6313699299286256969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_15
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed773665f450c5d0800000000000000
+      internalID: -3044339935143821846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62af5fd9e996b870800000000000000
+      internalID: 8698308960066708077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_17
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9feac2cd6a26ed70800000000000000
+      internalID: 9071985150292324252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_18
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1847dbc8a3c8220800000000000000
+      internalID: 2489429070177403323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_19
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d7b9a9802ebd340800000000000000
+      internalID: 4889750347022302551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_20
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e742f2ff5c59b3440800000000000000
+      internalID: 4916688095827403902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_21
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d25867ec0f4ea920800000000000000
+      internalID: 3003424918343275222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_22
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006472066186d2b50800000000000000
+      internalID: 6570021876715177472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_23
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd40bf8e1d75e840800000000000000
+      internalID: 5252742110610738640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ad86d41c65867b0800000000000000
+      internalID: -5230835578963436904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c733ecaf8da08f0800000000000000
+      internalID: -573407430823412697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4087e44d839d9450800000000000000
+      internalID: 6097191705485213770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_27
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a72597a70281c10800000000000000
+      internalID: 2024403742896585309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_28
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce86cd69e95fda4d0800000000000000
+      internalID: -3121568905213220628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_29
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f3b2ce8b1e32850800000000000000
+      internalID: 6351168083875020576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_30
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a70853e6966aef00800000000000000
+      internalID: 1146841853364537256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_31
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52326f28f0ad4f10800000000000000
+      internalID: 2255635976189784668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_32
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b71af6b9dd3cd380800000000000000
+      internalID: -8945206754577606735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_33
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25421c1ef92f44810800000000000000
+      internalID: 1748789323827848274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_34
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56775ed929136c5f0800000000000000
+      internalID: -736846983244449947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_35
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32aea97447826440800000000000000
+      internalID: 4927649670465757759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d860e50e2ce4e4b0800000000000000
+      internalID: -5411941169781249834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_37
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602ebd74d4e64a510800000000000000
+      internalID: 1559492649174163974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_38
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed997e42d4fb9e20800000000000000
+      internalID: 3358547131231739368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_39
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c47f080cfab37ed0800000000000000
+      internalID: -2417382983338068796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_40
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cee728b3361e300800000000000000
+      internalID: 279613759117257797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_41
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef697881142fa05f0800000000000000
+      internalID: -789552423251765506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_42
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d444d5cadd4d2d670800000000000000
+      internalID: 8562139890129388621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_43
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f5d3d117bb298e0800000000000000
+      internalID: -1688080815814254749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_44
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bceaf1bfaf068a310800000000000000
+      internalID: 1416488713879269067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_45
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458da73f6194c8ab0800000000000000
+      internalID: -5004544722992441260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_46
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d35fb36c6b375d0800000000000000
+      internalID: -3065905958783468195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CooldownSpritemap_47
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ab8040507a09070800000000000000
+      internalID: 8111166568878619255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

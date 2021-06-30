@@ -14,9 +14,9 @@ TagManager:
   - UI
   - Pickup
   - Mover
-  - 
-  - 
-  - 
+  - Wall
+  - Spell
+  - Intangible
   - 
   - 
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pointer
+    uniqueID: 2303895051
+    locked: 0
+  - name: Player
+    uniqueID: 3066200717
     locked: 0

@@ -1,0 +1,75 @@
+Intoxication Effects:
+Reduced Cooldown
+Reduced Spell Cost
+Increased Spell Magnitude
+Reduced Spell Accuracy (Holding down a spell increases it's accuracy)
+
+NPCs:
+Bartenders will serve you drinks that you request. 
+
+Wasteyutes are standard bar-goers. 
+- They slowly move around, dance, and drink. They drop their drinks and their wallets upon losing all hp
+- Upon taking damage, they drop their drinks/foods/walltet and will run out of the bar.
+- Wasteyutes can be annoyed by players. Upon being fully annoyed, they will become Aggressive, or Snitch
+- If they turn aggressive, they will actively pursue the player and attack them by throwing stuff or scrapping
+- If they decide to snitch, they will search for a Bouncer and report you to them, increasing your Notoriety
+- The following Annoys Wasteyutes:
+- Bumping into them
+- Dealing damage to nearby Wasteyutes
+- Casting Spells around them
+- Puking/Peeing in their vicinity
+
+Bouncers are boss-like NPCs
+- Casting spells or puking near a bouncer immediately increases your notoriety and causes them to pursue you
+- Bouncers move very fast when pursuing a player and deal a lot of damage.
+
+Notoriety causes the following:
+- Wasteyutes become annoyed faster
+- Wasteyutes are more likely to become Aggressive than they are to snitch
+- Wasteyutes and Bouncers take less damage from you
+- Bartenders serve drinks at a premium
+- More bouncers will pursue the player
+
+Fine Damsels are sudden-death tiebreakers:
+The following increases your favour with them:
+- Being close to them with high Notoriety
+- Casting spells while close to them
+- Damaging other players close to them
+- Providing them with a drink
+The following decreases your favour with them:
+- Damaging them
+- Peeing/Puking near them
+- Taking Damage near them
+At the end of the sudden death no players/NPCs can move anymore, as the Fine Damsel will smooch the player with the highest Favour, causing them to win the round.
+Tiebreaks (equal Favour) are settled by Notoriety, then Distance, then player number.
+
+Fireball: Launch a ball of fire that explodes on impact
+Conflagration: Shoot a cone of fire from your hands
+
+Iceberg: Conjure an impassable wall of 4 ice blocks. Each sections can be destroyed. Slows and damages all nearby enemies
+Chill Wind: Create a cloud of frost which damages and freezes anything it comes close to. Can move through walls
+
+Shocking Entrance: Disappear for a brief moment, only to reappear at the cursor some while later dealing lightning damage to everything nearby
+Stormy Invocation: channel for a bit, after which you fire a bolt of lightning which pierces through objects and bounces off walls. Spell ends after reaching it's max distance and hitting the next wall. This spell has an indicator on where its going to travel.
+
+Shattered Earth: Smash your fist in the ground causing a fissure to extend forward. After a delay, spikes erupt from the fissure, blocking movement and dealing damage upon emerging
+Gaia's Fist: Lunge forward and smash the first object/player/NPC hit, knocking them back tremendously and dealing damage. This spell can cause the player and target to break through walls.
+
+Acidic Residue: After a delay, create a burst of acid at a location, and leave behind a puddle which slows and damages all movers on it.
+
+Lightfooted: Conjure a whirlwind at your feet that encircles you. While in this form, you are always moving, have a turn rate, and move fast. Anything you hit is knocked back and takes damage.
+Indirection: Instantly create a small cone of wind in front of you which knocks things back and can deflect spells
+
+Different Alcohol types give you bonuses for all spells of the related element! Based off the last two alcoholic drinks you drank
+
+X = bonus damage
+N = half damage
+
+   X  | Fire | Ice | Shock | Earth | Water | Acid | Air |
+Fire  |  N   |  X  |       |   N   |   N   |  X   |     |
+Ice   |  N   |  N  |       |   N   |   X   |      |  X  |
+Shock |      |     |   N   |       |   X   |      |  X  |
+Earth |  X   |  X  |       |   N   |       |      |  N  |
+Water |  X   |  N  |       |       |   N   |      |     |
+Acid  |  N   |     |       |       |       |  N   |     |
+Air   |      |  N  |   N   |   X   |       |      |  N  |

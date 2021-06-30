@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddedbf8d8f316548addb67a4ef66ca2, type: 3}
   m_Name: PlayerOneStats
   m_EditorClassIdentifier: 
-  maxHp: 5
-  currentHp: 3
+  intoxicationChangeEvent: {fileID: 11400000, guid: 539814fbce7223344afe3c3ece2f64ee, type: 2}
+  maxHp: 100
+  currentHp: 72.49783
+  maxIntoxication: 100
+  _currentIntoxication: 999400
