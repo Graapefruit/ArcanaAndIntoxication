@@ -21,6 +21,13 @@ public class Player : MonoBehaviour {
             doMovement();
         });
 
+        // State deadState = new State();
+        // deadState.name = "Dead State";
+        // deadState.onEnter = (() => {
+
+        // });
+        // deadState.onFixedUpdate = (() => {});
+
         defaultState.onGetNextState = (() => {
             return defaultState;
         });
@@ -48,7 +55,7 @@ public class Player : MonoBehaviour {
     }
 
     public void dealDamage(float damage) {
-        stats.currentHp -= damage;
+        stats.CurrentHp -= damage;
     }
 
     private bool sufficientMana(SpellInfo spellInfo) {

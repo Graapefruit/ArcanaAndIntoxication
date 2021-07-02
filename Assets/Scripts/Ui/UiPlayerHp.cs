@@ -8,8 +8,9 @@ public class UiPlayerHp : MonoBehaviour {
     private Text text;
     void Start() {
         text = transform.GetComponent<Text>();
+        updateDisplay();
     }
-    void Update() {
-        text.text = "HP: " + stats.currentHp.ToString("0") + " / " + stats.maxHp.ToString("0");
+    public void updateDisplay() {
+        text.text = "HP: " + stats.CurrentHp.ToString("0") + " / " + stats.maxHp.ToString("0");
     }
 }
