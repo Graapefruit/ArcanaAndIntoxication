@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     private const float BASE_SPEED = 6.0f;
+    public Rigidbody2D rigidbody2d;
+    public SpriteRenderer avatar;
     public PlayerStats stats;
     public Inventory inventory;
     public Spellbook spellbook;
     private StateManager stateManager;
     public Vector2 movementInput;
-    private Rigidbody2D rigidbody2d;
+    private bool alive;
 
     void Awake() {
         movementInput = Vector2.zero;
-        rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        alive = true;
 
         State defaultState = new State();
         defaultState.name = "Default State";
@@ -21,15 +23,27 @@ public class Player : MonoBehaviour {
             doMovement();
         });
 
-        // State deadState = new State();
-        // deadState.name = "Dead State";
-        // deadState.onEnter = (() => {
-
-        // });
-        // deadState.onFixedUpdate = (() => {});
+        State deadState = new State();
+        deadState.name = "Dead State";
+        deadState.onEnter = (() => {
+            rotateAvatar();
+        });
+        deadState.onFixedUpdate = (() => {});
 
         defaultState.onGetNextState = (() => {
-            return defaultState;
+            if (alive) {
+                return defaultState;
+            } else {
+                return deadState;
+            }
+        });
+
+        deadState.onGetNextState = (() => {
+            if (alive) {
+                return defaultState;
+            } else {
+                return deadState;
+            }
         });
 
         stateManager = new StateManager("Player", defaultState);
@@ -54,12 +68,21 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public void killPlayer() {
+        alive = false;
+    }
+
     public void dealDamage(float damage) {
         stats.CurrentHp -= damage;
     }
 
     private bool sufficientMana(SpellInfo spellInfo) {
         return spellInfo.cost <= stats.CurrentIntoxication;
+    }
+
+    private void rotateAvatar() {
+        avatar.transform.rotation = Quaternion.Euler(0, 0, 90.0f);
+        avatar.color = Color.red;
     }
 
     private void doMovement() {

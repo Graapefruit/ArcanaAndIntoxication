@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour {
+    private const float ONE_OVER_ROOT_TWO = 0.707107f;
+    public Player player;
+    public Pointer pointer;
     new public Camera camera;
     public EventSystem eventSystem;
     public GraphicRaycaster leftPageRaycaster;
@@ -13,16 +16,11 @@ public class PlayerController : MonoBehaviour {
     public GameEvent disableSpellbookUI;
     public GameEvent flipSpellbookLeft;
     public GameEvent flipSpellbookRight;
-    private const float ONE_OVER_ROOT_TWO = 0.707107f;
-    private Player player;
-    private StateManager stateManager;
     private Vector3 heading;
-    private Pointer pointer;
+    private StateManager stateManager;
 
     void Awake() {
         heading = Vector3.zero;
-        pointer = transform.Find("Pointer").GetComponent<Pointer>();
-        player = transform.GetComponent<Player>();
 
         // ===== STATES =====
 

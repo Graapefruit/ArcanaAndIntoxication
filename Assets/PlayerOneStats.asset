@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddedbf8d8f316548addb67a4ef66ca2, type: 3}
   m_Name: PlayerOneStats
   m_EditorClassIdentifier: 
+  hpChangeEvent: {fileID: 11400000, guid: 0ae74311e856e114881de352b5b5654e, type: 2}
   intoxicationChangeEvent: {fileID: 11400000, guid: 539814fbce7223344afe3c3ece2f64ee, type: 2}
+  playerDeathEvent: {fileID: 11400000, guid: e15350722aab8cd4bb00e7a2d7ff8052, type: 2}
   maxHp: 100
-  currentHp: 72.49783
   maxIntoxication: 100
-  _currentIntoxication: 999400
+  _currentHp: 0
+  _currentIntoxication: 999170
