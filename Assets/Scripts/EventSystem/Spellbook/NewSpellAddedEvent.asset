@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4f2c17dc16a58444aea07234af15bfa, type: 3}
-  m_Name: FireballPage
+  m_Script: {fileID: 11500000, guid: 3b4b7c5c224a57d4ea09f25befdbdfb3, type: 3}
+  m_Name: NewSpellAddedEvent
   m_EditorClassIdentifier: 
-  name: Fireball Page
-  spellInfo: {fileID: 11400000, guid: 82d3b84d5663454469025eba660c61ef, type: 2}

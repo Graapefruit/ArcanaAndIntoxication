@@ -12,6 +12,7 @@ public class SpellbookUI : MonoBehaviour {
     private int page;
     // Start is called before the first frame update
     void Awake() {
+        page = 0;
         leftPage = transform.Find("LeftPage").GetComponent<SpellbookPageUI>();
         rightPage = transform.Find("RightPage").GetComponent<SpellbookPageUI>();
         leftButton = transform.Find("LeftButton").gameObject;
@@ -40,8 +41,27 @@ public class SpellbookUI : MonoBehaviour {
     }
 
     public void addNewSpell() {
-        // If on the last page and another page available, add spell
-        // If on the last page and no page available, add an arrow
+        if (spellbook.getSpellCount() == 1) {
+            leftPage.SpellIndex = 0;
+            leftPage.gameObject.SetActive(true);
+        }
+        if (onLastPagePriorToNewSpell()) {
+            if (onSecondPageFilledPriorToNewSpell()) {
+                rightButton.SetActive(true);
+            } else {
+                rightPage.SpellIndex = spellbook.getSpellCount() - 1;
+                rightPage.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    private bool onLastPagePriorToNewSpell() {
+        Debug.Log(page);
+        return page == (spellbook.getSpellCount() / 2) - 1;
+    }
+
+    private bool onSecondPageFilledPriorToNewSpell() {
+        return spellbook.getSpellCount() % 2 == 1;
     }
 
     private void setButtonActivity() {

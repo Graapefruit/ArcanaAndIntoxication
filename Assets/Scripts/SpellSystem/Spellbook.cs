@@ -13,6 +13,7 @@ public class Spellbook : ScriptableObject {
     private float[] timeLastCast;
     [SerializeField]
     public GameEvent hotbarUpdateEvent;
+    public GameEvent spellAddedEvent;
     private List<int> spellbookToHotbar;
 
     void OnValidate() {
@@ -50,8 +51,12 @@ public class Spellbook : ScriptableObject {
     }
 
     public void addNewSpell(SpellInfo spellInfo) {
+        if (spellInfo == null) {
+            Debug.LogWarning("Attempting to add null spell! Continuing Anyways.");
+        }
         spells.Add(spellInfo);
         spellbookToHotbar.Add(0);
+        spellAddedEvent.Raise();
     }
 
     public void setNewHotbarMapping(int h, int i) {
