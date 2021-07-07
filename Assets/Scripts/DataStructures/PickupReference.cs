@@ -3,4 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Alcohol : Item {}
+public class PickupReference : ScriptableObject {
+    [SerializeField]
+    public Pickup value;
+}

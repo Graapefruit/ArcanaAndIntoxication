@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : Mover {
     private const float BASE_SPEED = 6.0f;
     public Rigidbody2D rigidbody2d;
     public SpriteRenderer avatar;
     public PlayerStats stats;
-    public Inventory inventory;
     public Spellbook spellbook;
-    private StateManager stateManager;
     public Vector2 movementInput;
+    public PlayerPickupHelper playerPickupHelper;
+    public Holdable HeldItem {
+        get { return HeldItem; }
+        set { heldItem = value; }
+    }
+    private Holdable heldItem;
+    private StateManager stateManager;
     private bool alive;
 
     void Awake() {
@@ -53,29 +58,6 @@ public class Player : MonoBehaviour {
         stateManager.doFixedUpdate();
     }
 
-    public void castSpell(int hotkey, Vector3 castTarget) {
-        SpellInfo spellInfo = spellbook.getSpellFromHotbar(hotkey);
-        if (spellInfo != null) {
-            if (spellbook.spellOffCooldown(hotkey) && sufficientMana(spellInfo)) {
-                Spell spellPrefab = spellInfo.spellPrefab;
-                Spell spellInstance = Instantiate(spellPrefab, transform.position, Quaternion.identity);
-                spellInstance.caster = this;
-                spellInstance.intoxicationLevel = 0;
-                spellInstance.location = castTarget;
-                stats.CurrentIntoxication -= spellInfo.cost;
-                spellbook.putSpellOnCooldown(hotkey);
-            }
-        }
-    }
-
-    public void killPlayer() {
-        alive = false;
-    }
-
-    public void dealDamage(float damage) {
-        stats.CurrentHp -= damage;
-    }
-
     private bool sufficientMana(SpellInfo spellInfo) {
         return spellInfo.cost <= stats.CurrentIntoxication;
     }
@@ -91,6 +73,37 @@ public class Player : MonoBehaviour {
             pos.x += movementInput.x * BASE_SPEED * Time.deltaTime;
             pos.y += movementInput.y * BASE_SPEED * Time.deltaTime;
             rigidbody2d.MovePosition(pos);
+            playerPickupHelper.chooseNextCollectableCandidate();
         }
+    }
+
+    public void castSpell(int hotkey, Vector3 castTarget) {
+        SpellInfo spellInfo = spellbook.getSpellFromHotbar(hotkey);
+        if (spellInfo != null) {
+            if (spellbook.spellOffCooldown(hotkey) && sufficientMana(spellInfo)) {
+                Spell spellPrefab = spellInfo.spellPrefab;
+                Spell spellInstance = Instantiate(spellPrefab, transform.position, Quaternion.identity);
+                spellInstance.caster = this;
+                spellInstance.intoxicationLevel = 0;
+                spellInstance.location = castTarget;
+                stats.CurrentIntoxication -= spellInfo.cost;
+                spellbook.putSpellOnCooldown(hotkey);
+            }
+        }
+    }
+
+    public void pickupThePickupCandidate() {
+        Pickup pickup = playerPickupHelper.pickupCandidate.value;
+        if (pickup != null) {
+            pickup.pickup(this);
+        }
+    }
+
+    public void killPlayer() {
+        alive = false;
+    }
+
+    public override void dealDamage(float damage) {
+        stats.CurrentHp -= damage;
     }
 }

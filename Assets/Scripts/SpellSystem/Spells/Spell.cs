@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Spell : MonoBehaviour {
-    public Player caster;
+    public Mover caster;
     public Vector3 location;
     public float intoxicationLevel = -1;
     protected void throwIfNotAllNecessaryDataPresent() {

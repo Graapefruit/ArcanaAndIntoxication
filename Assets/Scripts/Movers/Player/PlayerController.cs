@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
             updateHeading();
             updateCharacterMovement();
             doCharacterSpellCasts();
+            doPickup();
         });
 
         State spellbookState = new State();
@@ -92,6 +93,12 @@ public class PlayerController : MonoBehaviour {
         }
         player.movementInput.x = x;
         player.movementInput.y = y;
+    }
+
+    private void doPickup() {
+        if (Input.GetKeyDown(KeyCode.F)) {
+            player.pickupThePickupCandidate();
+        }
     }
 
     private void doCharacterSpellCasts() {

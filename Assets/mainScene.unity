@@ -1571,7 +1571,7 @@ RectTransform:
   - {fileID: 2097852684}
   - {fileID: 1288807869}
   m_Father: {fileID: 1895985342}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2499,6 +2499,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809214468}
   m_CullTransparentMesh: 1
+--- !u!1 &847435194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847435195}
+  - component: {fileID: 847435197}
+  - component: {fileID: 847435196}
+  - component: {fileID: 847435199}
+  - component: {fileID: 847435198}
+  m_Layer: 5
+  m_Name: PickupNotification
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &847435195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847435194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1895985342}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &847435196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847435194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Press [F] to pickup: '
+--- !u!222 &847435197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847435194}
+  m_CullTransparentMesh: 1
+--- !u!114 &847435198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847435194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc5ed3521f0c794f97f380fad80711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: dcce1c44020d90e44a4635937dd99bad, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 847435194}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &847435199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847435194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba737967ab18df4a9b94823f9edc33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectable: {fileID: 11400000, guid: e57cfd33528962245930e168af26026c, type: 2}
+  text: {fileID: 847435196}
 --- !u!1 &896228007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5809,7 +5932,7 @@ RectTransform:
   m_Children:
   - {fileID: 1590457221}
   m_Father: {fileID: 1895985342}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6781,6 +6904,7 @@ RectTransform:
   m_Children:
   - {fileID: 1637774889}
   - {fileID: 2006818902}
+  - {fileID: 847435195}
   - {fileID: 1432803183}
   - {fileID: 336055466}
   m_Father: {fileID: 0}
@@ -7322,6 +7446,7 @@ GameObject:
   - component: {fileID: 2104807768}
   - component: {fileID: 2104807772}
   - component: {fileID: 2104807771}
+  - component: {fileID: 2104807774}
   - component: {fileID: 2104807773}
   m_Layer: 7
   m_Name: Player
@@ -7345,9 +7470,9 @@ MonoBehaviour:
   rigidbody2d: {fileID: 2104807771}
   avatar: {fileID: 166186453}
   stats: {fileID: 11400000, guid: 28428278cb3138442a6fbbef9366d168, type: 2}
-  inventory: {fileID: 11400000, guid: 89ba3e9639809b3429f972f78546bc7d, type: 2}
   spellbook: {fileID: 11400000, guid: c19f5831088676e49980e22bde8e9ae9, type: 2}
   movementInput: {x: 0, y: 0}
+  playerPickupHelper: {fileID: 0}
 --- !u!114 &2104807769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7462,6 +7587,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2104807774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104807767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cdaccea88d7714d81fc9bfa520e08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupCandidate: {fileID: 0}
+  newPickupCandidateEvent: {fileID: 11400000, guid: dcce1c44020d90e44a4635937dd99bad, type: 2}
 --- !u!1 &2113284062
 GameObject:
   m_ObjectHideFlags: 0

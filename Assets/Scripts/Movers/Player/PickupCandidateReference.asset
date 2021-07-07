@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b1557914eac7e4680c7e95fe2be0ec, type: 3}
-  m_Name: Beer
+  m_Script: {fileID: 11500000, guid: 3db475ecdc52fd34d9ca6bc792f65859, type: 3}
+  m_Name: PickupCandidateReference
   m_EditorClassIdentifier: 
-  pickupPrefab: {fileID: 0}

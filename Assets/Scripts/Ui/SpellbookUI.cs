@@ -40,7 +40,8 @@ public class SpellbookUI : MonoBehaviour {
     }
 
     public void addNewSpell() {
-
+        // If on the last page and another page available, add spell
+        // If on the last page and no page available, add an arrow
     }
 
     private void setButtonActivity() {

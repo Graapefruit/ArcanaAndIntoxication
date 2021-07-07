@@ -8,7 +8,7 @@ public class Spellbook : ScriptableObject {
     [SerializeField]
     private List<SpellInfo> spells;
     [SerializeField]
-    // The fact that spells are indexed here as 0-3 but we use hotkeys 1-4 makes the below code have a lot of annoying off-by-one issues that should remain fixed
+    // The fact that spells are indexed here as 0-3 but we use hotkeys 1-4 makes the below code have a lot of annoying off-by-one issues
     private int[] hotbarToSpellbook;
     private float[] timeLastCast;
     [SerializeField]
@@ -49,9 +49,10 @@ public class Spellbook : ScriptableObject {
         return spellbookToHotbar[i];
     }
 
-    // public void addNewSpell(SpellInfo spellInfo) {
-        
-    // }
+    public void addNewSpell(SpellInfo spellInfo) {
+        spells.Add(spellInfo);
+        spellbookToHotbar.Add(0);
+    }
 
     public void setNewHotbarMapping(int h, int i) {
         if (hotbarToSpellbook[h-1] != -1) {

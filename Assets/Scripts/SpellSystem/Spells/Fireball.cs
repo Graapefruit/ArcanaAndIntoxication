@@ -26,12 +26,12 @@ public class Fireball : Spell {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.layer == 7) {
-            Player player = other.gameObject.GetComponent<Player>();
-            if (!alreadyHitCaster && player == caster) {
+            Mover mover = other.gameObject.GetComponent<Mover>();
+            if (!alreadyHitCaster && mover == caster) {
                 alreadyHitCaster = true;
                 return;
             } else {
-                player.dealDamage(BASE_DAMAGE);
+                mover.dealDamage(BASE_DAMAGE);
             }
         }
         Spell explosion = Instantiate(fireballExplosionPrefab, transform.position, Quaternion.identity);
