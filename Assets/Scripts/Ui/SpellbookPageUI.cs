@@ -28,7 +28,6 @@ public class SpellbookPageUI : MonoBehaviour {
     public int SpellIndex {
         get { return spellIndex; }
         set { 
-            Debug.Log("hi");
             spellIndex = value;
             SpellInfo spellInfo = spellbook.getSpell(spellIndex);
             image.sprite = spellInfo.sprite;

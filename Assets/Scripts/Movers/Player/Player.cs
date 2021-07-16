@@ -10,11 +10,15 @@ public class Player : Mover {
     public Spellbook spellbook;
     public Vector2 movementInput;
     public PlayerPickupHelper playerPickupHelper;
+    public GameEvent newPlayerHeldItemEvent;
     public Holdable HeldItem {
-        get { return HeldItem; }
-        set { heldItem = value; }
+        get { return _holdableReference.value; }
+        set { 
+            _holdableReference.value = value;
+            newPlayerHeldItemEvent.Raise();
+        }
     }
-    private Holdable heldItem;
+    public HoldableReference _holdableReference;
     private StateManager stateManager;
     private bool alive;
 
@@ -34,6 +38,9 @@ public class Player : Mover {
             rotateAvatar();
         });
         deadState.onFixedUpdate = (() => {});
+
+        State consumingState = new State();
+        consumingState.name = "Consuming State";
 
         defaultState.onGetNextState = (() => {
             if (alive) {
