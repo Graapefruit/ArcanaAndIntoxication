@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu]
-public class Holdable : Collectable {
+public abstract class Holdable : Collectable {
     public Sprite displaySprite;
 }

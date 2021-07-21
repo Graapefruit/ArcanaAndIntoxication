@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db475ecdc52fd34d9ca6bc792f65859, type: 3}
   m_Name: PickupCandidateReference
   m_EditorClassIdentifier: 
+  value: {fileID: 0}

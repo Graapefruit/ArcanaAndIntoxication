@@ -13,12 +13,25 @@ public class Player : Mover {
     public GameEvent newPlayerHeldItemEvent;
     public Holdable HeldItem {
         get { return _holdableReference.value; }
-        set { 
+        set {
             _holdableReference.value = value;
             newPlayerHeldItemEvent.Raise();
         }
     }
     public HoldableReference _holdableReference;
+    public float TimeNeededToConsume  {
+        get { return timeNeededToConsume; }
+        set {
+            isConsuming = true;
+            timeNeededToConsume = value;
+            timeConsumeStarted = Time.time;
+            timeConsuming = 0.0f;
+        }
+    }
+    private float timeNeededToConsume;
+    private float timeConsuming;
+    private bool isConsuming;
+    private float timeConsumeStarted;
     private StateManager stateManager;
     private bool alive;
 
@@ -37,14 +50,18 @@ public class Player : Mover {
         deadState.onEnter = (() => {
             rotateAvatar();
         });
-        deadState.onFixedUpdate = (() => {});
 
         State consumingState = new State();
         consumingState.name = "Consuming State";
+        consumingState.onUpdate = (() => {
+            tickDownConsumeTimer();
+        });
 
         defaultState.onGetNextState = (() => {
             if (alive) {
                 return defaultState;
+            } else if (isConsuming) {
+                return consumingState;
             } else {
                 return deadState;
             }
@@ -55,6 +72,16 @@ public class Player : Mover {
                 return defaultState;
             } else {
                 return deadState;
+            }
+        });
+
+        consumingState.onGetNextState = (() => {
+            if (!alive) {
+                return deadState;
+            } else if (isConsuming) {
+                return consumingState;
+            } else {
+                return defaultState;
             }
         });
 
@@ -112,5 +139,12 @@ public class Player : Mover {
 
     public override void dealDamage(float damage) {
         stats.CurrentHp -= damage;
+    }
+
+    private void tickDownConsumeTimer() {
+        timeConsuming = Time.time - timeConsumeStarted;
+        if (timeConsuming > timeNeededToConsume) {
+            isConsuming = false;
+        }
     }
 }

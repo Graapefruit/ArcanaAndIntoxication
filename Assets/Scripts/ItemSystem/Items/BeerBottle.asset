@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 568fbc996e6eae548ac09952ff40b150, type: 3}
+  m_Script: {fileID: 11500000, guid: 33d25f542e785654288c459a0aa30467, type: 3}
   m_Name: BeerBottle
   m_EditorClassIdentifier: 
-  name: 
-  displaySprite: {fileID: 0}
+  name: Beer Bottle
+  displaySprite: {fileID: 21300000, guid: cb8a82659b9059b4e9b661140aa020b0, type: 3}
+  consumptionTime: 2.5
+  intoxicationAmount: 20

@@ -12,12 +12,12 @@ public class StateManager {
 
     public void doFixedUpdate() {
         doStateTransitionIfNeeded();
-        doWithErrorHandling(currentState.onFixedUpdate, "Fixed Update", currentState.name);
+        doIfExists(currentState.onFixedUpdate);
     }
 
     public void doUpdate() {
         doStateTransitionIfNeeded();
-        doWithErrorHandling(currentState.onUpdate, "Update", currentState.name);
+        doIfExists(currentState.onUpdate);
     }
 
     private void doStateTransitionIfNeeded() {
