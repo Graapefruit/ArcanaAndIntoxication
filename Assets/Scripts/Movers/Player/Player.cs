@@ -13,6 +13,7 @@ public class Player : Mover {
     public Vector2Reference playerLocation;
     public PlayerPickupHelper playerPickupHelper;
     public BooleanReference useItemCommand;
+    public BooleanReference pickupCommand;
     public GameEvent newPlayerHeldItemEvent;
     public Holdable HeldItem {
         get { return _holdableReference.value; }
@@ -33,6 +34,9 @@ public class Player : Mover {
 
         State defaultState = new State();
         defaultState.name = "Default State";
+        defaultState.onUpdate = (() => {
+            doPickup();
+        });
         defaultState.onFixedUpdate = (() => {
             doMovement();
         });
@@ -49,8 +53,6 @@ public class Player : Mover {
             isConsuming = true;
             timeConsumeStarted = Time.time;
             timeNeededToConsume = (_holdableReference.value as Consumable).consumptionTime;
-            Debug.Log(timeConsumeStarted);
-            Debug.Log(timeNeededToConsume);
         });
         consumingState.onUpdate = (() => {
             tickConsuming();
@@ -87,6 +89,21 @@ public class Player : Mover {
         stateManager = new StateManager("Player", defaultState);
     }
 
+    public void castSpell(int hotkey) {
+        SpellInfo spellInfo = spellbook.getSpellFromHotbar(hotkey);
+        if (spellInfo != null) {
+            if (spellbook.spellOffCooldown(hotkey) && sufficientMana(spellInfo)) {
+                Spell spellPrefab = spellInfo.spellPrefab;
+                Spell spellInstance = Instantiate(spellPrefab, transform.position, Quaternion.identity);
+                spellInstance.caster = this;
+                spellInstance.intoxicationLevel = 0;
+                spellInstance.location = lookTarget.value;
+                stats.CurrentIntoxication -= spellInfo.cost;
+                spellbook.putSpellOnCooldown(hotkey);
+            }
+        }
+    }
+
     void Update() {
         stateManager.doUpdate();
         playerLocation.value.x = transform.position.x;
@@ -97,7 +114,7 @@ public class Player : Mover {
         stateManager.doFixedUpdate();
     }
 
-    public bool shouldStartConsuming() {
+    private bool shouldStartConsuming() {
         return (!isConsuming && useItemCommand.value && _holdableReference.value != null && _holdableReference.value is Consumable);
     }
 
@@ -120,25 +137,12 @@ public class Player : Mover {
         }
     }
 
-    public void castSpell(int hotkey) {
-        SpellInfo spellInfo = spellbook.getSpellFromHotbar(hotkey);
-        if (spellInfo != null) {
-            if (spellbook.spellOffCooldown(hotkey) && sufficientMana(spellInfo)) {
-                Spell spellPrefab = spellInfo.spellPrefab;
-                Spell spellInstance = Instantiate(spellPrefab, transform.position, Quaternion.identity);
-                spellInstance.caster = this;
-                spellInstance.intoxicationLevel = 0;
-                spellInstance.location = lookTarget.value;
-                stats.CurrentIntoxication -= spellInfo.cost;
-                spellbook.putSpellOnCooldown(hotkey);
+    private void doPickup() {
+        if (pickupCommand.value) {
+            Pickup pickup = playerPickupHelper.pickupCandidate.value;
+            if (pickup != null) {
+                pickup.pickup(this);
             }
-        }
-    }
-
-    public void pickupThePickupCandidate() {
-        Pickup pickup = playerPickupHelper.pickupCandidate.value;
-        if (pickup != null) {
-            pickup.pickup(this);
         }
     }
 

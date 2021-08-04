@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour {
     private const float ONE_OVER_ROOT_TWO = 0.707107f;
-    public Player player;
     public Pointer pointer;
     new public Camera camera;
     public EventSystem eventSystem;
@@ -23,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     public Vector2Reference moveDirection;
     public Vector2Reference lookTarget;
     public BooleanReference useItemCommand;
+    public BooleanReference pickupCommand;
     private StateManager stateManager;
 
     void Awake() {
@@ -102,9 +102,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void doPickup() {
-        if (Input.GetKeyDown(KeyCode.F)) {
-            player.pickupThePickupCandidate();
-        }
+        pickupCommand.value = Input.GetKeyDown(KeyCode.F);
     }
 
     private void doCharacterSpellCasts() {
@@ -172,10 +170,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void doItemUsage() {
-        if (Input.GetMouseButtonDown(0)) {
-            useItemCommand.value = true;
-        } else {
-            useItemCommand.value = false;
-        }
+        useItemCommand.value = Input.GetMouseButtonDown(0);
     }
 }
