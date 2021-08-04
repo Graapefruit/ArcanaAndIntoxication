@@ -5500,6 +5500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 1.5
+  playerLocation: {fileID: 11400000, guid: 753730860bef9e44297529b91944e733, type: 2}
+  lookLocation: {fileID: 11400000, guid: 764abfd4ab3c28c48920e55ec714426d, type: 2}
 --- !u!212 &999450313
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7758,6 +7760,10 @@ GameObject:
   - component: {fileID: 2104807771}
   - component: {fileID: 2104807774}
   - component: {fileID: 2104807773}
+  - component: {fileID: 2104807778}
+  - component: {fileID: 2104807777}
+  - component: {fileID: 2104807776}
+  - component: {fileID: 2104807775}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -7781,7 +7787,9 @@ MonoBehaviour:
   avatar: {fileID: 166186453}
   stats: {fileID: 11400000, guid: 28428278cb3138442a6fbbef9366d168, type: 2}
   spellbook: {fileID: 11400000, guid: c19f5831088676e49980e22bde8e9ae9, type: 2}
-  movementInput: {x: 0, y: 0}
+  moveDirection: {fileID: 11400000, guid: d5a22049cb7e0984a88a3d3f919a82dd, type: 2}
+  lookTarget: {fileID: 11400000, guid: 764abfd4ab3c28c48920e55ec714426d, type: 2}
+  playerLocation: {fileID: 11400000, guid: 753730860bef9e44297529b91944e733, type: 2}
   playerPickupHelper: {fileID: 2104807774}
   newPlayerHeldItemEvent: {fileID: 11400000, guid: 79ef1e9dee5b1e245adee3228203bf02, type: 2}
   _holdableReference: {fileID: 11400000, guid: f85301488f8089a41b4c76cf3d297652, type: 2}
@@ -7807,6 +7815,12 @@ MonoBehaviour:
   disableSpellbookUI: {fileID: 11400000, guid: 9dc7a8232ff98a246bc57dcbd07178bb, type: 2}
   flipSpellbookLeft: {fileID: 11400000, guid: 094866ed3be74024199c5bb5daf6229c, type: 2}
   flipSpellbookRight: {fileID: 11400000, guid: c9825f67677e2ec4d8f2fd5b218209e8, type: 2}
+  castFirstSpellEvent: {fileID: 11400000, guid: 3bbc41263e840d04487eb248a1fc4541, type: 2}
+  castSecondSpellEvent: {fileID: 11400000, guid: 7d81198dcec26904eaf8c1b922efbf98, type: 2}
+  castThirdSpellEvent: {fileID: 11400000, guid: a313a73c43641964cbabc7548c08a399, type: 2}
+  castFourthSpellEvent: {fileID: 11400000, guid: 8235593eaba6c0942bb6629a0b4dcc7d, type: 2}
+  moveDirection: {fileID: 11400000, guid: d5a22049cb7e0984a88a3d3f919a82dd, type: 2}
+  lookTarget: {fileID: 11400000, guid: 764abfd4ab3c28c48920e55ec714426d, type: 2}
 --- !u!4 &2104807770
 Transform:
   m_ObjectHideFlags: 0
@@ -7913,6 +7927,118 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupCandidate: {fileID: 11400000, guid: e57cfd33528962245930e168af26026c, type: 2}
   newPickupCandidateEvent: {fileID: 11400000, guid: dcce1c44020d90e44a4635937dd99bad, type: 2}
+--- !u!114 &2104807775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104807767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc5ed3521f0c794f97f380fad80711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8235593eaba6c0942bb6629a0b4dcc7d, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2104807768}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: castSpell
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2104807776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104807767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc5ed3521f0c794f97f380fad80711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a313a73c43641964cbabc7548c08a399, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2104807768}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: castSpell
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2104807777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104807767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc5ed3521f0c794f97f380fad80711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7d81198dcec26904eaf8c1b922efbf98, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2104807768}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: castSpell
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2104807778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104807767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc5ed3521f0c794f97f380fad80711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3bbc41263e840d04487eb248a1fc4541, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2104807768}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: castSpell
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2113284062
 GameObject:
   m_ObjectHideFlags: 0

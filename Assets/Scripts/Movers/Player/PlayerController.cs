@@ -16,12 +16,16 @@ public class PlayerController : MonoBehaviour {
     public GameEvent disableSpellbookUI;
     public GameEvent flipSpellbookLeft;
     public GameEvent flipSpellbookRight;
-    private Vector3 heading;
+    public GameEvent castFirstSpellEvent;
+    public GameEvent castSecondSpellEvent;
+    public GameEvent castThirdSpellEvent;
+    public GameEvent castFourthSpellEvent;
+    public Vector2Reference moveDirection;
+    public Vector2Reference lookTarget;
+    public BooleanReference useItemCommand;
     private StateManager stateManager;
 
     void Awake() {
-        heading = Vector3.zero;
-
         // ===== STATES =====
 
         State freeState = new State();
@@ -31,8 +35,11 @@ public class PlayerController : MonoBehaviour {
             updateCharacterMovement();
             doCharacterSpellCasts();
             doPickup();
+            doItemUsage();
         });
-
+        freeState.onExit= (() => {
+            useItemCommand.value = false;
+        });
         State spellbookState = new State();
         spellbookState.name = "Spellbook State";
         spellbookState.onEnter = (() => {
@@ -91,8 +98,7 @@ public class PlayerController : MonoBehaviour {
             x *= ONE_OVER_ROOT_TWO;
             y *= ONE_OVER_ROOT_TWO;
         }
-        player.movementInput.x = x;
-        player.movementInput.y = y;
+        moveDirection.value = new Vector2(x, y);
     }
 
     private void doPickup() {
@@ -103,13 +109,13 @@ public class PlayerController : MonoBehaviour {
 
     private void doCharacterSpellCasts() {
         if (Input.GetKey(KeyCode.Alpha1)) {
-            player.castSpell(1, heading);
+            castFirstSpellEvent.Raise();
         } else if (Input.GetKey(KeyCode.Alpha2)) {
-            player.castSpell(2, heading);
+            castSecondSpellEvent.Raise();
         } else if (Input.GetKey(KeyCode.Alpha3)) {
-            player.castSpell(3, heading);
+            castThirdSpellEvent.Raise();
         } else if (Input.GetKey(KeyCode.Alpha4)) {
-            player.castSpell(4, heading);
+            castFourthSpellEvent.Raise();
         }
     }
 
@@ -161,8 +167,15 @@ public class PlayerController : MonoBehaviour {
 
     private void updateHeading() {
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-        heading = ray.origin;
-        heading.z = 0.0f;
-        pointer.doUpdate(transform.position, heading);
+        lookTarget.value.x = ray.origin.x;
+        lookTarget.value.y = ray.origin.y;
+    }
+
+    private void doItemUsage() {
+        if (Input.GetMouseButtonDown(0)) {
+            useItemCommand.value = true;
+        } else {
+            useItemCommand.value = false;
+        }
     }
 }
