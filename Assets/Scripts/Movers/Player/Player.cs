@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Mover {
+public class Player : Mover, Damageable {
     private const float BASE_SPEED = 6.0f;
     public Rigidbody2D rigidbody2d;
     public SpriteRenderer avatar;
@@ -94,10 +94,10 @@ public class Player : Mover {
         if (spellInfo != null) {
             if (spellbook.spellOffCooldown(hotkey) && sufficientMana(spellInfo)) {
                 Spell spellPrefab = spellInfo.spellPrefab;
+                spellPrefab.caster = this;
+                spellPrefab.intoxicationLevel = 0;
+                spellPrefab.location = lookTarget.value;
                 Spell spellInstance = Instantiate(spellPrefab, transform.position, Quaternion.identity);
-                spellInstance.caster = this;
-                spellInstance.intoxicationLevel = 0;
-                spellInstance.location = lookTarget.value;
                 stats.CurrentIntoxication -= spellInfo.cost;
                 spellbook.putSpellOnCooldown(hotkey);
             }
@@ -150,7 +150,7 @@ public class Player : Mover {
         alive = false;
     }
 
-    public override void dealDamage(float damage) {
+    public void dealDamage(float damage) {
         stats.CurrentHp -= damage;
     }
 

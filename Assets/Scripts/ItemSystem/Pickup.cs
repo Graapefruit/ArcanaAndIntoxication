@@ -11,14 +11,18 @@ public class Pickup : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other) {
         Player player = other.gameObject.transform.GetComponent<Player>();
-        player.playerPickupHelper.addPickupOption(this);
-        pickupCandiadates.Add(player);
+        if (player != null) {
+            player.playerPickupHelper.addPickupOption(this);
+            pickupCandiadates.Add(player);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         Player player = other.gameObject.transform.GetComponent<Player>();
-        player.playerPickupHelper.removePickupOption(this);
-        pickupCandiadates.Remove(player);
+        if (player != null) {
+            player.playerPickupHelper.removePickupOption(this);
+            pickupCandiadates.Remove(player);
+        }
     }
 
     // We cannot return and Destroy in the same function, so we must access the player directly

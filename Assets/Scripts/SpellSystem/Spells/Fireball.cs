@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : Spell {
+public class Fireball : Spell, Damageable {
     public Spell fireballExplosionPrefab;
     private const float FIREBALL_SPEED = 2.0f;
     private const float ROTATION_SPEED = 8.0f;
@@ -25,15 +25,23 @@ public class Fireball : Spell {
     } 
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.layer == 7) {
-            Mover mover = other.gameObject.GetComponent<Mover>();
-            if (!alreadyHitCaster && mover == caster) {
+        Damageable damageable = other.gameObject.GetComponent<Damageable>();
+        if (damageable != null) {
+            if (!alreadyHitCaster && damageable == caster as Damageable) {
                 alreadyHitCaster = true;
                 return;
             } else {
-                mover.dealDamage(BASE_DAMAGE);
+                damageable.dealDamage(BASE_DAMAGE);
             }
         }
+        explode();
+    }
+
+    public void dealDamage(float damage) {
+        explode();
+    }
+
+    private void explode() {
         Spell explosion = Instantiate(fireballExplosionPrefab, transform.position, Quaternion.identity);
         explosion.caster = caster;
         explosion.intoxicationLevel = intoxicationLevel;

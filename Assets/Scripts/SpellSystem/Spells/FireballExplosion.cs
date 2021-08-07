@@ -28,9 +28,9 @@ public class FireballExplosion : Spell
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.layer == 7) {
-            Player player = other.gameObject.GetComponent<Player>();
-            player.dealDamage(BASE_DAMAGE - (timeElapsed * DAMAGE_DECAY_RATE));
+        Damageable damageable = other.gameObject.GetComponent<Damageable>();
+        if (damageable != null) {
+            damageable.dealDamage(BASE_DAMAGE - (timeElapsed * DAMAGE_DECAY_RATE));
         }
     }
 }

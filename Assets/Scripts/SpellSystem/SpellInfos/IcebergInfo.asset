@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f1dc184dbca3d5489cbdc3da9dbcd4c, type: 3}
-  m_Name: FlashFreezeInfo
+  m_Name: IcebergInfo
   m_EditorClassIdentifier: 
-  name: Flash Freeze
+  name: Iceberg
   description: Thanks Trudeau
-  cooldown: 3
+  cooldown: 2
   cost: 10
   sprite: {fileID: 21300000, guid: f91f8875711679b4a9ad78f1f01ebe7f, type: 3}
-  spellPrefab: {fileID: 6174999049301834417, guid: 895b592b38ec21a4f9b24339d6561360, type: 3}
+  spellPrefab: {fileID: 6112882164381133480, guid: eaad272efc4fa09468266f136908a049, type: 3}

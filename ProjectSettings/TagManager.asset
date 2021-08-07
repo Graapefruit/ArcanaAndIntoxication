@@ -48,3 +48,6 @@ TagManager:
   - name: Player
     uniqueID: 3066200717
     locked: 0
+  - name: Spells
+    uniqueID: 283621079
+    locked: 0

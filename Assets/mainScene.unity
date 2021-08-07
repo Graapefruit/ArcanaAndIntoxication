@@ -7791,6 +7791,8 @@ MonoBehaviour:
   lookTarget: {fileID: 11400000, guid: 764abfd4ab3c28c48920e55ec714426d, type: 2}
   playerLocation: {fileID: 11400000, guid: 753730860bef9e44297529b91944e733, type: 2}
   playerPickupHelper: {fileID: 2104807774}
+  useItemCommand: {fileID: 11400000, guid: 8354b547ef43f884689dff65b2dc95f2, type: 2}
+  pickupCommand: {fileID: 11400000, guid: 13da58beea4cfca4ba621cc4cbaa031d, type: 2}
   newPlayerHeldItemEvent: {fileID: 11400000, guid: 79ef1e9dee5b1e245adee3228203bf02, type: 2}
   _holdableReference: {fileID: 11400000, guid: f85301488f8089a41b4c76cf3d297652, type: 2}
 --- !u!114 &2104807769
@@ -7805,7 +7807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b1b7cf8d1201145940e4449cdb66f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2104807768}
   pointer: {fileID: 999450312}
   camera: {fileID: 2026772968}
   eventSystem: {fileID: 1827099495}
@@ -7821,6 +7822,8 @@ MonoBehaviour:
   castFourthSpellEvent: {fileID: 11400000, guid: 8235593eaba6c0942bb6629a0b4dcc7d, type: 2}
   moveDirection: {fileID: 11400000, guid: d5a22049cb7e0984a88a3d3f919a82dd, type: 2}
   lookTarget: {fileID: 11400000, guid: 764abfd4ab3c28c48920e55ec714426d, type: 2}
+  useItemCommand: {fileID: 11400000, guid: 8354b547ef43f884689dff65b2dc95f2, type: 2}
+  pickupCommand: {fileID: 11400000, guid: 13da58beea4cfca4ba621cc4cbaa031d, type: 2}
 --- !u!4 &2104807770
 Transform:
   m_ObjectHideFlags: 0
@@ -7858,7 +7861,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2104807772
 BoxCollider2D:
   m_ObjectHideFlags: 0

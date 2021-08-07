@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spells:
   - {fileID: 11400000, guid: 82d3b84d5663454469025eba660c61ef, type: 2}
-  hotbarToSpellbook: 00000000ffffffffffffffffffffffff
+  - {fileID: 11400000, guid: 2dfc6932adec01a4d939f933713a267c, type: 2}
+  hotbarToSpellbook: 0000000001000000ffffffffffffffff
   hotbarUpdateEvent: {fileID: 11400000, guid: 8ec82acdaab2b144a8be7644e2253f8a, type: 2}
   spellAddedEvent: {fileID: 11400000, guid: be31585c1aa3123489b08809945392ad, type: 2}

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 8d6a3c1d87b6c564a9797e521ded03dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - IcebergBlockPrefab: {fileID: 5957605557994646013, guid: bf7b092fe3469384caceb1b313267827, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
